@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Slider29</title>
+        <title>Slider31</title>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
@@ -14,14 +14,10 @@
     
      <script>
 	function myFunction() {    
-	document.getElementById('progressBar').addEventListener('click', function (e) {
-	var x = e.pageX - this.offsetLeft;
-	var startPos = document.getElementById('progressBar').position;
-	var xconvert = x/300;
-	var finalx = (xconvert).toFixed(1);
-	document.getElementById('progressBar').value = finalx;
-
-	document.getElementById('myvalue').value = finalx;
+	var doc = document.getElementById("progressBar");             
+            // Changing the text content
+            
+            document.getElementById("progressBar").value = 0.5; 
 }
 </script>
     
