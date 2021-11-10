@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Slider22</title>
+        <title>Slider23</title>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
@@ -12,6 +12,18 @@
      
     </head>
     
+     <script>
+document.getElementById('progressBar').addEventListener('click', function (e) {
+	var x = e.pageX - this.offsetLeft;
+	var startPos = document.getElementById('progressBar').position;
+	var xconvert = x/300;
+	var finalx = (xconvert).toFixed(1);
+	document.getElementById('progressBar').value = finalx;
+
+	document.getElementById('myvalue').value = finalx;	
+</script>
+    
+    
     
      <style>
  .container{
@@ -20,6 +32,7 @@
      clear: both;
      bottom: 0;
      left: 50;
+     display: flex;
      justify-content: center;
       align-items: center;
          }
@@ -30,6 +43,7 @@
     height: 23px;
     bottom: 0;
     left: 50;
+    display: flex;
     justify-content: center;
       align-items: center;
 }
