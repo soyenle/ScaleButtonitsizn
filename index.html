@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>1Slider</title>
+        <title>2Slider</title>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
@@ -13,7 +13,8 @@
     </head>
     
      <script>
-	    
+AFRAME.registerComponent('listener1', {
+  init: function () {
 	document.getElementById('progressBar').addEventListener('click', function (e) {
 	var x = e.pageX - this.offsetLeft;
 	var startPos = document.getElementById('progressBar').position;
@@ -23,7 +24,8 @@
 
 	document.getElementById('myvalue').value = finalx;
 
-});
+})
+  });
  
 					    
 </script>
@@ -84,7 +86,8 @@ input{
     </div>
         
      <div class="container" >
-         <progress id="progressBar" max="1" value="0.1" ></progress>
+         <progress id="progressBar" max="1" value="0.1" listener1 ></progress>
+	     
          <input type="text" id="myvalue" value="0.1"></input>
 	    <input type="text" id="myvalue1" value="A"></input>
      </div>
