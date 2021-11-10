@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Slider45</title>
+        <title>1Slider</title>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
@@ -14,14 +14,16 @@
     
      <script>
 	    
-	function myFunction(e) {
-     		var x = e.offsetX
-		var y = e.offsetLeft
-          
-            document.getElementById("progressBar").value = 0.5; 
-	    document.getElementById('myvalue').value = x;
-	document.getElementById('myvalue1').value = y;
-}
+	document.getElementById('progressBar').addEventListener('click', function (e) {
+	var x = e.pageX - this.offsetLeft;
+	var startPos = document.getElementById('progressBar').position;
+	var xconvert = x/300;
+	var finalx = (xconvert).toFixed(1);
+	document.getElementById('progressBar').value = finalx;
+
+	document.getElementById('myvalue').value = finalx;
+
+});
  
 					    
 </script>
@@ -82,7 +84,7 @@ input{
     </div>
         
      <div class="container" >
-         <progress id="progressBar" max="1" value="0.1" onclick = "myFunction(e)"></progress>
+         <progress id="progressBar" max="1" value="0.1" ></progress>
          <input type="text" id="myvalue" value="0.1"></input>
 	    <input type="text" id="myvalue1" value="A"></input>
      </div>
