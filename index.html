@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Slider6</title>
+        <title>Slider7</title>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
@@ -9,21 +9,18 @@
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
         <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
         
-         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
-        
+     
     </head>
     
     
      <style>
-   .slider {
+  .slider {
   width: 300px;
   height: 300px;
   display: flex;
-  overflow-x: auto;       
-  position: absolute;
+  overflow-x: auto;
 }
-  .slide {
+.slide {
   width: 300px;
   flex-shrink: 0;
   height: 100%;
@@ -36,16 +33,21 @@
     
     <body style="margin: 0; overflow: hidden;">
         
-        <div class="slider"> 
-            <div class="slide" id="slide-1"></div>
-        </div>
+        
+        <div class="slider">
+  <div class="slide" id="slide-1"></div>
+  <div class="slide" id="slide-2"></div>
+  <div class="slide" id="slide-3"></div>
+  <div class="slide" id="slide-4"></div>
+  <div class="slide" id="slide-5"></div>
+</div>
         
         <a-scene
             renderer="logarithmicDepthBuffer: true;"
             embedded
             loading-screen="enabled: false;"
             arjs="sourceType: webcam; debugUIEnabled: false;"
-            gesture-detector
+          
         >
             <a-assets>
                 <a-asset-item
@@ -60,7 +62,7 @@
                     gltf-model="#animated-asset"
                     scale="0.7980656777191893 0.7980656777191893 0.7980656777191893"
                     gps-entity-place="latitude: 50.14226; longitude: 8.9413;"
-                    gesture-handler
+                
                 ></a-entity>
 
             <a-camera gps-camera></a-camera>
