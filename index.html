@@ -14,13 +14,17 @@
     
      <script>
 	function myFunction() {    
+		progressBar.addEventListener('click', function(e) {
+     		var percentage = Math.floor((e.offsetX / this.offsetWidth) * 100);
+			var percentage1 = e.offsetX
+     		
+		
 	var doc = document.getElementById("progressBar");             
-            // Changing the text content
-            var x = doc.offsetWidth;
-		var y = doc.ClientX ;
+
+           
             document.getElementById("progressBar").value = 0.5; 
-	    document.getElementById('myvalue').value = x;
-		document.getElementById('myvalue1').value = y;
+	    document.getElementById('myvalue').value = percentage;
+		document.getElementById('myvalue1').value = percentage1;
 }
 </script>
     
