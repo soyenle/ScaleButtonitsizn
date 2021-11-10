@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Slider35</title>
+        <title>Slider36</title>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
@@ -16,9 +16,11 @@
 	function myFunction() {    
 	var doc = document.getElementById("progressBar");             
             // Changing the text content
-            var x = doc.pageX - doc.offsetLeft;
+            var x = doc.offsetLeft;
+		var y = doc.pageX ;
             document.getElementById("progressBar").value = 0.5; 
 	    document.getElementById('myvalue').value = x;
+		document.getElementById('myvalue1').value = y;
 }
 </script>
     
@@ -80,6 +82,7 @@ input{
      <div class="container" >
          <progress id="progressBar" max="1" value="0.1" onclick = "myFunction()"></progress>
          <input type="text" id="myvalue" value="0.1"></input>
+	    <input type="text" id="myvalue1" value="A"></input>
      </div>
         
         <a-scene
