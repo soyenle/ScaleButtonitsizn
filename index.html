@@ -20,14 +20,14 @@ AFRAME.registerComponent('listener1', {
 	  document.getElementById('progressBar').addEventListener('click', function (e) {
 	
 		var x = e.pageX - this.offsetLeft;
-		  var y = this.offsetLeft;
+		
 	var startPos = document.getElementById('progressBar').position;
-	var xconvert = x/180;
+	var xconvert = x/300;
 	var finalx = (xconvert).toFixed(1);
 	document.getElementById('progressBar').value = finalx;
 
-	document.getElementById('myvalue').value = x;
-		  document.getElementById('myvalue1').value = y;
+	document.getElementById('myvalue').value = finalx;
+
 });
     
   }});
@@ -94,7 +94,7 @@ input{
          <progress id="progressBar" max="1" value="0.1"  ></progress>
 	     
          <input type="text" id="myvalue" value="0.1"></input>
-	    <input type="text" id="myvalue1" value="A"></input>
+	
      </div>
         
         <a-scene
