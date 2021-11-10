@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Slider7</title>
+        <title>Slider8</title>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
@@ -20,11 +20,17 @@
   display: flex;
   overflow-x: auto;
 }
-.slide {
-  width: 300px;
-  flex-shrink: 0;
-  height: 100%;
-}
+.buttons {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 5em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
         
      </style>  
 
@@ -34,13 +40,9 @@
     <body style="margin: 0; overflow: hidden;">
         
         
-        <div class="slider">
-  <div class="slide" id="slide-1"></div>
-  <div class="slide" id="slide-2"></div>
-  <div class="slide" id="slide-3"></div>
-  <div class="slide" id="slide-4"></div>
-  <div class="slide" id="slide-5"></div>
-</div>
+      <div class="buttons">
+     <button class="Test" type = "button" id = "btn"> LinkButton </button>
+    </div>
         
         <a-scene
             renderer="logarithmicDepthBuffer: true;"
