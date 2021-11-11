@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>13Slider</title>
+        <title>14Slider</title>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
@@ -27,7 +27,7 @@ AFRAME.registerComponent('listener1', {
 	document.getElementById('progressBar').value = finalx;
 
 	document.getElementById('myvalue').value = finalx;
-		  ocument.getElementById('Ring').scale.set(finalx,finalx,finalx);
+		  ocument.getElementById('Ring').scale.set(0.1,0.1,0.1);
 
 });
     
@@ -103,7 +103,7 @@ input{
             embedded
             loading-screen="enabled: false;"
             arjs="sourceType: webcam; debugUIEnabled: false;"
-	listener1
+	
           
         >
             <a-assets>
@@ -114,7 +114,7 @@ input{
             </a-assets>
 
                 <a-entity
-        		id="Ring"
+        	    id="Ring"
                     animation-mixer="loop: repeat"
                     gltf-model="#animated-asset"
                     scale="0.7980656777191893 0.7980656777191893 0.7980656777191893"
