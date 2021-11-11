@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>10Slider</title>
+        <title>11Slider</title>
         
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -28,6 +28,7 @@ AFRAME.registerComponent('listener1', {
 	document.getElementById('progressBar').value = finalx;
 
 	document.getElementById('myvalue').value = finalx;
+	document.getElementById('Ring').scale.set(1, 2, 3);
 		  
 
 });
@@ -114,7 +115,7 @@ input{
 
                 <a-entity
 
-        		id="Ring"
+        	    id="Ring"
                     animation-mixer="loop: repeat"
                     gltf-model="#animated-asset"
                     scale="0.7980656777191893 0.7980656777191893 0.7980656777191893"                               
