@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>10Slider</title>
+        <title>12Slider</title>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
@@ -27,6 +27,7 @@ AFRAME.registerComponent('listener1', {
 	document.getElementById('progressBar').value = finalx;
 
 	document.getElementById('myvalue').value = finalx;
+		  ocument.getElementById('Ring').scale.set(1, 1, 1);
 
 });
     
@@ -113,12 +114,12 @@ input{
             </a-assets>
 
                 <a-entity
-        
+        		id="Ring"
                     animation-mixer="loop: repeat"
                     gltf-model="#animated-asset"
                     scale="0.7980656777191893 0.7980656777191893 0.7980656777191893"
-                    gps-entity-place="latitude: 50.14226; longitude: 8.9413;"
-                
+                    gps-entity-place="latitude: 50.092258; longitude: 8.57765;"
+              listener1
                 ></a-entity>
 
             <a-camera gps-camera></a-camera>
